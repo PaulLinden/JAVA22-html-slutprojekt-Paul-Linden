@@ -1,0 +1,287 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+
+
+
+body {
+    background-image: linear-gradient(to bottom right, #006370, #8F5525);
+}
+
+/*header*/
+header {
+    position: fixed;
+    height: 100%;
+    width: 10%;
+    min-width: 130px;
+    border-right: groove #00D4F0 6px;
+    background-image: linear-gradient(to bottom left, #006370, #8F5525);
+}
+
+nav {
+    width: 100px;
+    position: relative;
+    left: 10px;
+    margin-top: 40px;
+}
+
+li {
+    list-style: none;
+    margin-top: 20px;
+    padding: 10px;
+    border: grey groove 2px;
+    text-align: center;
+}
+
+h1 {
+    margin: 10px;
+    border-bottom: #00D4F0 groove 2px;
+    color: aqua;
+    text-shadow: 3px 2px #070503;
+}
+
+h3 {
+    color: aqua;
+    text-shadow: 3px 2px #070503;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: aqua;
+    font-size: large;
+    text-shadow: 1px 1px #070503;
+
+}
+
+.mainmenu a:hover {
+    border-bottom: 4px #8F5525 solid;
+    background: #00A7BD;
+    padding: 6px 6px 4px;
+    transition-duration: 0.5s;
+    border-radius: 4px;
+    color: aqua;
+}
+
+.drop-menu {
+    border-radius: 4px;
+    background-color: #49DEF2;
+    padding: 0 4px;
+    border: grey ridge 2px;
+}
+
+div.drop-menu a {
+    display: none;
+    list-style: none;
+    color: black;
+    margin: 10px 0;
+    text-shadow: none;
+}
+
+li:hover>div.drop-menu a {
+    display: flex;
+    padding: 0px;
+    border: 0;
+    height: 20px;
+}
+
+/*------------------------------------*/
+
+/*maincontent*/
+main {
+    min-height: 2000px;
+    background-image: url(../images/bakgrundsbild-stad-main.webp);
+    background-size: contain;
+    background-attachment: fixed;
+    margin-left: 10%;
+}
+
+h2 {
+    background-color: rgb(52, 140, 111);
+    text-align: center;
+    border: #8F5525 groove 2px;
+    color: #02272b;
+    border-radius: 30%;
+}
+
+.infomain {
+    background-image: url(../images/bakgrund-infosidan-stad.gif);
+    background-size: cover;
+}
+
+.infoarticle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-top: 5%;
+}
+
+.projarti {
+    height: 100vh;
+}
+
+.portfolio {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 5%;
+}
+
+.projsect {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40%;
+    border-top: grey groove 4px;
+}
+
+.projsect2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40%;
+}
+
+
+
+
+/*footer*/
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 5%;
+    width: 100%;
+    background: #0E1C30;
+    color: aqua;
+    border-top: #8F5525 groove 4px;
+    position: fixed;
+    bottom: 0;
+}
+
+/*------------------------------------*/
+
+/*images*/
+img {
+    height: 300px;
+    width: 500px;
+    border: groove #8F5525 6px;
+    border-radius: 10%;
+
+}
+
+.profilimg {
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+.projimg {
+    width: 100px;
+    height: 100px;
+    align-self: flex-end;
+}
+
+
+.projimg:hover {
+    width: 500px;
+    height: 333px;
+    transition: width 2s, height 2s;
+}
+
+/*paragraph*/
+.infop {
+    background: #070503;
+    color: aqua;
+    width: 50%;
+    min-width: 300px;
+    border: ridge #8F5525 2px;
+    border-radius: 3%;
+    margin-bottom: 20px;
+    font-size: larger;
+}
+
+.proj-p {
+    width: 500px;
+    background-color: #49DEF2;
+    border: gray groove 6px;
+    border-radius: 6%;
+    padding: 6px;
+    font-size: larger;
+    margin-top: 4px;
+}
+
+/*------------------------------------*/
+
+/*-----------MQ-----------------------*/
+@media only screen and (max-width: 800px) {
+
+    .portfolio .projarti,
+    .projsect,
+    .projsect2,
+    .infoarticle {
+        width: 70%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-left: 18%;
+
+    }
+
+
+    .projimg,
+    .projimg:hover {
+        width: 400px;
+        height: 200px;
+        margin-bottom: 40px;
+        margin-top: 10px;
+    }
+
+    .projsect2 {
+        margin-bottom: 10px;
+    }
+
+    img {
+        width: 390px;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+        margin-left: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 635px) {
+
+    header,
+    nav {
+        position: relative;
+        text-align: center;
+        float: none;
+        width: 100%;
+        height: max-content;
+        border: 0;
+        margin-bottom: 10px;
+    }
+
+    main {
+        min-width: 0;
+        margin: 0;
+    }
+
+    img {
+        height: 220px;
+    }
+
+    /*------------------------------------*/
